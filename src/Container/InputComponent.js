@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Input } from "antd";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";

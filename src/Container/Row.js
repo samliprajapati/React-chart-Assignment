@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Row() {
   const [name, setName] = useState("");
   const [value, setValue] = useState("");
-  const [id, setId] = useState(Date.now());
+  const [id] = useState(Date.now());
 
   function handleChangeName(e) {
     setName(e.target.value);

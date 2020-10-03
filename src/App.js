@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Chart from "./Container/Chart";
 import MainApp from "./MainApp";
+import "antd/dist/antd.css";
 
 function App() {
   return (

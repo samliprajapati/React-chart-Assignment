@@ -1,5 +1,30 @@
 .NextPage {
-  margin: 20px 20px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.landing-img {
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+}
+.left-box {
+  widows: 50%;
+  height: 100vh;
+}
+.right-box {
+  width: 50%;
+}
+.img {
+  width: 100%;
+  height: 100%;
 }
 .MainBox {
   margin: 20px 0px;
@@ -8,12 +33,13 @@
   justify-content: center;
 }
 .InputBox {
-  width: 30%;
+  width: 80%;
 }
 .Container {
   display: flex;
   justify-content: space-between;
   margin: 10px 0px;
+  width: 100%;
 }
 .button {
   display: flex;
@@ -41,15 +67,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .Container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0px;
-  }
-  .InputBox {
-    width: 100%;
-  }
   .button {
     display: flex;
     justify-content: center;
@@ -63,6 +80,20 @@
     display: flex;
     margin: 10px 0px;
     justify-content: space-around;
+  }
+  .landing-img {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    justify-content: space-between;
+  }
+  .left-box {
+    widows: 100%;
+    height: 30vh;
+  }
+  .right-box {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 992px) {

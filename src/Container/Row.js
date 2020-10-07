@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { addCard } from "./Action";
 import { Link } from "react-router-dom";
+import imging from "../Assets/bg.jpg";
 function Row() {
   const [name, setName] = useState("");
   const [value, setValue] = useState("");
@@ -18,15 +19,20 @@ function Row() {
   }
 
   return (
-    <div>
-      <Link to="/chart">
-        <div className="NextPage">Go To Next Page</div>
-      </Link>
-      <InputComponent
-        handleChangeName={handleChangeName}
-        handleChangeValue={handleChangeValue}
-      />
-      <CardComponent name={name} value={value} id={id} />
+    <div class="landing-img">
+      <div className="left-box">
+        <img src={imging} className="img" />
+      </div>
+      <div className="right-box">
+        <Link to="/chart">
+          <div className="NextPage">Go To Next Page</div>
+        </Link>
+        <InputComponent
+          handleChangeName={handleChangeName}
+          handleChangeValue={handleChangeValue}
+        />
+        <CardComponent name={name} value={value} id={id} />
+      </div>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import * as types from "./ActionType";
 const initialState = {
   addingRow: false,
   addingRowError: false,
-  rows: [{ Row: 0 }],
+  rows: [{ Row: 0, name: "", value: "", id: "" }],
 
   addingCard: false,
   addingCardError: false,

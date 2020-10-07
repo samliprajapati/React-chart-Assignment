@@ -6,10 +6,14 @@ import { addRow } from "./Action";
 import { CloseOutlined } from "@ant-design/icons";
 
 function InputComponent(props) {
-  function handleAddRowClick() {
-    // props.addRow({ Row: 1 });
-    props.addRow({ Row: 1, name: "", value: "", id: Math.random() });
+  function handleAddRowClick(name, value) {
+    props.addRow(...props.rows, {
+      name: name,
+      value: value,
+      id: props.rows.id + 1,
+    });
   }
+  console.log(props.rows);
   function handleDelete(id) {
     alert(id);
   }
@@ -32,12 +36,15 @@ function InputComponent(props) {
                     onChange={props.handleChangeValue}
                   />
                 </div>
-                <CloseOutlined onClick={() => handleDelete()} />
+                <CloseOutlined onClick={() => handleDelete(props.id)} />
               </div>
             );
           })}
           <div className="button">
-            <Button type="primary" onClick={handleAddRowClick}>
+            <Button
+              type="primary"
+              onClick={() => handleAddRowClick(props.name, props.value)}
+            >
               Add Row
             </Button>
           </div>

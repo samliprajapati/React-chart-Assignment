@@ -3,13 +3,13 @@ import CardComponent from "./CardComponent";
 import InputComponent from "./InputComponent";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { addCard } from "./Action";
+import { addCard, addRow } from "./Action";
 import { Link } from "react-router-dom";
 import imging from "../Assets/bg.jpg";
 function Row() {
   const [name, setName] = useState("");
   const [value, setValue] = useState("");
-  const [id] = useState(Date.now());
+  const [id] = useState("");
 
   function handleChangeName(e) {
     setName(e.target.value);
@@ -30,6 +30,9 @@ function Row() {
         <InputComponent
           handleChangeName={handleChangeName}
           handleChangeValue={handleChangeValue}
+          name={name}
+          value={value}
+          id={id}
         />
         <CardComponent name={name} value={value} id={id} />
       </div>
@@ -37,7 +40,7 @@ function Row() {
   );
 }
 
-const mapStateToProps = ({ main }) => ({});
+const mapStateToProps = ({ main }) => ({ rows: main.rows });
 const mapDispatchToProps = (dispatch) =>
-  bindActionCreators({ addCard }, dispatch);
+  bindActionCreators({ addCard, addRow }, dispatch);
 export default connect(mapStateToProps, mapDispatchToProps)(Row);

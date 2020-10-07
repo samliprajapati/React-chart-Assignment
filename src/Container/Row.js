@@ -21,7 +21,7 @@ function Row() {
   return (
     <div class="landing-img">
       <div className="left-box">
-        <img src={imging} className="img" />
+        <img src={imging} className="img" alt="bg-img" />
       </div>
       <div className="right-box">
         <Link to="/chart">

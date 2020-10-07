@@ -23,9 +23,17 @@ function CardComponent(props) {
           >
             Create Card
           </Button>
-          {props.cards.map((item) => {
-            return (
-              <div style={{ display: "flex" }}>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+
+              display: "flex",
+              flexWrap: "wrap",
+            }}
+          >
+            {props.cards.map((item) => {
+              return (
                 <div className="Card">
                   <div>
                     <div>{item.name}</div>
@@ -35,9 +43,9 @@ function CardComponent(props) {
                     <div>{item.id}</div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

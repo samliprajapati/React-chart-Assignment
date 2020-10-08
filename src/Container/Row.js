@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import CardComponent from "./CardComponent";
+import React from "react";
 import InputComponent from "./InputComponent";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";

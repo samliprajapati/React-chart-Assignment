@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { addRow } from "./Action";
 import { CloseOutlined } from "@ant-design/icons";
-import CardComponent from "./CardComponent";
 
 function InputComponent(props) {
   const [rows, setRows] = useState([{ name: "", value: "", id: 1 }]);

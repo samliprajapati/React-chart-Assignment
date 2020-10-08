@@ -7,17 +7,6 @@ import { addCard, addRow } from "./Action";
 import { Link } from "react-router-dom";
 import imging from "../Assets/bg.jpg";
 function Row() {
-  const [name, setName] = useState("");
-  const [value, setValue] = useState("");
-  const [id] = useState("");
-
-  function handleChangeName(e) {
-    setName(e.target.value);
-  }
-  function handleChangeValue(e) {
-    setValue(e.target.value);
-  }
-
   return (
     <div class="landing-img">
       <div className="left-box">
@@ -27,14 +16,7 @@ function Row() {
         <Link to="/chart">
           <div className="NextPage">Go To Next Page</div>
         </Link>
-        <InputComponent
-          handleChangeName={handleChangeName}
-          handleChangeValue={handleChangeValue}
-          name={name}
-          value={value}
-          id={id}
-        />
-        <CardComponent name={name} value={value} id={id} />
+        <InputComponent />
       </div>
     </div>
   );
